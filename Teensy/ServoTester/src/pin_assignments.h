@@ -2,8 +2,8 @@
 
 // 5 and 6 are SCL/SDA for nunchuck
 
-#define PIN_LCD_RS 16
-#define PIN_LCD_EN 17
+#define PIN_LCD_RS 17
+#define PIN_LCD_EN 16
 #define PIN_LCD_D0 18
 #define PIN_LCD_D1 19
 #define PIN_LCD_D2 20

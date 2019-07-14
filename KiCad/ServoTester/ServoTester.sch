@@ -166,7 +166,7 @@ U 1 1 5D230A33
 P 2550 3850
 F 0 "RV1" H 2482 3896 50  0000 R CNN
 F 1 "10k" H 2482 3805 50  0000 R CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 2550 3850 50  0001 C CNN
+F 2 "ServoTester:Potentiometer" H 2550 3850 50  0001 C CNN
 F 3 "~" H 2550 3850 50  0001 C CNN
 	1    2550 3850
 	1    0    0    -1  
@@ -509,24 +509,15 @@ Wire Wire Line
 Wire Wire Line
 	3650 4150 3650 4450
 Wire Wire Line
-	3650 2400 3700 2400
-Wire Wire Line
-	3700 2400 3700 4100
-Wire Wire Line
 	3700 4100 3150 4100
 Wire Wire Line
 	3150 4100 3150 4450
 Wire Wire Line
 	3600 2500 3650 2500
 Wire Wire Line
-	4250 2500 4250 3650
-Wire Wire Line
 	4250 3650 2950 3650
 Wire Wire Line
 	2950 3650 2950 4450
-Connection ~ 3650 2500
-Wire Wire Line
-	3650 2500 4250 2500
 $Comp
 L Connector:Conn_01x02_Female J2
 U 1 1 5D2772B7
@@ -542,4 +533,87 @@ Wire Wire Line
 	7600 3500 8950 3500
 Wire Wire Line
 	8200 3600 8950 3600
+$Comp
+L Device:CP1 C1
+U 1 1 5D2A2AFF
+P 5600 3100
+F 0 "C1" H 5715 3146 50  0000 L CNN
+F 1 "CP1" H 5715 3055 50  0000 L CNN
+F 2 "Capacitor_THT:CP_Radial_D8.0mm_P5.00mm" H 5600 3100 50  0001 C CNN
+F 3 "~" H 5600 3100 50  0001 C CNN
+	1    5600 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5600 2950 5600 2900
+Wire Wire Line
+	5600 2900 6100 2900
+Connection ~ 6100 2900
+Wire Wire Line
+	5600 3250 5600 3600
+Connection ~ 5600 3600
+Wire Wire Line
+	2250 1700 1950 1700
+$Comp
+L Device:R_US R2
+U 1 1 5D2B0146
+P 1950 1350
+F 0 "R2" H 2018 1396 50  0000 L CNN
+F 1 "R_US" H 2018 1305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 1990 1340 50  0001 C CNN
+F 3 "~" H 1950 1350 50  0001 C CNN
+	1    1950 1350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR0115
+U 1 1 5D2B0293
+P 1950 1100
+F 0 "#PWR0115" H 1950 950 50  0001 C CNN
+F 1 "VCC" H 1967 1273 50  0000 C CNN
+F 2 "" H 1950 1100 50  0001 C CNN
+F 3 "" H 1950 1100 50  0001 C CNN
+	1    1950 1100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0116
+U 1 1 5D2B37F4
+P 1400 1850
+F 0 "#PWR0116" H 1400 1600 50  0001 C CNN
+F 1 "GND" H 1405 1677 50  0000 C CNN
+F 2 "" H 1400 1850 50  0001 C CNN
+F 3 "" H 1400 1850 50  0001 C CNN
+	1    1400 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 1500 1950 1700
+Connection ~ 1950 1700
+Wire Wire Line
+	1950 1700 1800 1700
+Wire Wire Line
+	1950 1200 1950 1100
+Wire Wire Line
+	1400 1700 1400 1850
+$Comp
+L Switch:SW_Push_Open SW1
+U 1 1 5D2BF127
+P 1600 1700
+F 0 "SW1" H 1600 1915 50  0000 C CNN
+F 1 "SW_Push_Open" H 1600 1824 50  0000 C CNN
+F 2 "Button_Switch_THT:SW_PUSH_6mm_H5mm" H 1600 1900 50  0001 C CNN
+F 3 "" H 1600 1900 50  0001 C CNN
+	1    1600 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 2400 4250 3650
+Wire Wire Line
+	3650 2400 4250 2400
+Wire Wire Line
+	3650 2500 3700 2500
+Wire Wire Line
+	3700 2500 3700 4100
+Connection ~ 3650 2500
 $EndSCHEMATC
