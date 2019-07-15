@@ -9,12 +9,12 @@
 
 int toPulseMs(int degrees)
 {
-    return map(degrees, 0, 180, 1000, 2000);
+    return map(degrees, 0, 180, 544, 2400);
 }
 
 int toDegrees(int pulseMs)
 {
-    return map(pulseMs, 1000, 2000, 0, 180);
+    return map(pulseMs, 544, 2400, 0, 180);
 }
 
 ServoSettings servoSettings[4];
@@ -47,16 +47,12 @@ void ServoSettings::convertUnit(bool degrees)
     if (inDegrees && !degrees)
     {
         min = toPulseMs(min);
-        inputMid = toPulseMs(inputMid);
         max = toPulseMs(max);
-        deadzoneRadius = toPulseMs(deadzoneRadius);
     }
     else if (!inDegrees && degrees)
     {
         min = toDegrees(min);
-        inputMid = toDegrees(inputMid);
         max = toDegrees(max);
-        deadzoneRadius = toDegrees(deadzoneRadius);
     }
 
     inDegrees = degrees;

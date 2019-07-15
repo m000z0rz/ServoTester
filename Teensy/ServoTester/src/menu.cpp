@@ -160,17 +160,20 @@ void menu_loop(int inputX, int inputY, bool changeButton)
     up = inputY > MENU_INPUT_MID + MENU_INPUT_DEADZONE_RADIUS ? inputY : 0;
     
 
-    // make sure there is some input
-    if (!left && !right && !down && !up)
+    
+    if (left || right || down || up)
     {
-        return;
+        lastInput = millis();
     }
-
-    // At this point, there is SOME input we'll use
-    lastInput = millis();
 
     if (!changeButton)
     {
+        // make sure there is some input
+        if (!left && !right && !down && !up)
+        {
+            return;
+        }
+        
         MenuDirection direction = MenuDirectionNone;
 
         // move cursor
@@ -300,12 +303,14 @@ void menu_loop(int inputX, int inputY, bool changeButton)
                 if (servoSettings[servo].isInDegrees() && right)
                 {
                     servoSettings[servo].convertUnit(false);
-                    draw_setting(setting);
+                    draw_settings();
+                    //draw_setting(setting);
                 }
                 else if (!servoSettings[servo].isInDegrees() && left)
                 {
                     servoSettings[servo].convertUnit(true);
-                    draw_setting(setting);
+                    draw_settings();
+                    //draw_setting(setting);
                 }
             }
             else
@@ -339,21 +344,16 @@ void menu_loop(int inputX, int inputY, bool changeButton)
         
         else if (list == LIST_SYSTEM)
         {
-            Serial.println("change in system");
-            if (systemItem == SYSITEM_SAVE)
-            {
-                Serial.println("catch save");
-            }
             switch (systemItem)
             {
                 case SYSITEM_SAVE:
-                    Serial.println("saving");
                     save_servo_settings();
-                    pinMode(11, OUTPUT);
-                    digitalWrite(11, HIGH);
-                    delay(1000);
-                    digitalWrite(11, LOW);
-                    delay(1000);
+
+                    lcd.setCursor(COL_SYS_ITEM, systemItem - systemScroll);
+                    lcd.print("saved!   ");
+                    delay(500);
+                    draw_system_item(systemItem); // change back to save
+
                     break;
                 case SYSITEM_RESET:
                     servoSettings[0] = ServoSettings();
@@ -434,28 +434,22 @@ void draw_setting(int drawSetting)
     {
         if (servoSettings[servo].escStyle)
         {
-            lcd.print(" srv ");
-            lcd.write(byte(ARROW_CHAR));
-            lcd.print("esc");
+            lcd.print(" srv >esc");
         }
         else
         {
-            lcd.write(byte(ARROW_CHAR));
-            lcd.print("srv  esc");
+            lcd.print(">srv  esc");
         }
     }
     else if (drawSetting == SETTING_DEGPMS)
     {
         if (servoSettings[servo].isInDegrees())
         {
-            lcd.write(byte(ARROW_CHAR));
-            lcd.print("deg  pms");
+            lcd.print(">deg  pms");
         }
         else
         {
-            lcd.print(" deg ");
-            lcd.write(byte(ARROW_CHAR));
-            lcd.print("pms");
+            lcd.print(" deg >pms");
         }
     }
     else if (drawSetting == SETTING_MIN)
@@ -599,7 +593,7 @@ void clear_cursor_to_arrow()
     int col, row;
     get_cursor_pos(&col, &row);
     lcd.setCursor(col, row);
-    lcd.write(byte(ARROW_CHAR));
+    lcd.print(">");
 }
 
 void draw_cursor()
@@ -607,7 +601,7 @@ void draw_cursor()
     int col, row;
     get_cursor_pos(&col, &row);
     lcd.setCursor(col, row);
-    lcd.print(">");
+    lcd.write(byte(ARROW_CHAR));
 }
 
 void lcd_write_4(int n)
