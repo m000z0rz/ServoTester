@@ -246,7 +246,7 @@ U 1 1 5D23F5A1
 P 6100 3250
 F 0 "JP1" V 6054 3317 50  0000 L CNN
 F 1 "Jumper_3_Bridged12" V 6145 3317 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 6100 3250 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6100 3250 50  0001 C CNN
 F 3 "~" H 6100 3250 50  0001 C CNN
 	1    6100 3250
 	0    1    1    0   
@@ -257,7 +257,7 @@ U 1 1 5D23FCE9
 P 6600 3250
 F 0 "JP2" V 6554 3317 50  0000 L CNN
 F 1 "Jumper_3_Bridged12" V 6645 3317 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 6600 3250 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6600 3250 50  0001 C CNN
 F 3 "~" H 6600 3250 50  0001 C CNN
 	1    6600 3250
 	0    1    1    0   
@@ -268,7 +268,7 @@ U 1 1 5D23FD2A
 P 7100 3250
 F 0 "JP3" V 7054 3317 50  0000 L CNN
 F 1 "Jumper_3_Bridged12" V 7145 3317 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 7100 3250 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7100 3250 50  0001 C CNN
 F 3 "~" H 7100 3250 50  0001 C CNN
 	1    7100 3250
 	0    1    1    0   
@@ -279,7 +279,7 @@ U 1 1 5D23FD64
 P 7600 3250
 F 0 "JP4" V 7554 3317 50  0000 L CNN
 F 1 "Jumper_3_Bridged12" V 7645 3317 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 7600 3250 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7600 3250 50  0001 C CNN
 F 3 "~" H 7600 3250 50  0001 C CNN
 	1    7600 3250
 	0    1    1    0   
@@ -290,7 +290,7 @@ U 1 1 5D23FE6F
 P 6450 4000
 F 0 "M2" V 6399 4206 50  0000 L CNN
 F 1 "Motor_Servo_JR" V 6490 4206 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 6450 3810 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6450 3810 50  0001 C CNN
 F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 6450 3810 50  0001 C CNN
 	1    6450 4000
 	0    1    1    0   
@@ -301,7 +301,7 @@ U 1 1 5D2408C2
 P 5950 4000
 F 0 "M1" V 5899 4206 50  0000 L CNN
 F 1 "Motor_Servo_JR" V 5990 4206 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 5950 3810 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 5950 3810 50  0001 C CNN
 F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 5950 3810 50  0001 C CNN
 	1    5950 4000
 	0    1    1    0   
@@ -312,7 +312,7 @@ U 1 1 5D240C73
 P 6950 4000
 F 0 "M3" V 6899 4206 50  0000 L CNN
 F 1 "Motor_Servo_JR" V 6990 4206 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 6950 3810 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 6950 3810 50  0001 C CNN
 F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 6950 3810 50  0001 C CNN
 	1    6950 4000
 	0    1    1    0   
@@ -323,7 +323,7 @@ U 1 1 5D240CE3
 P 7450 4000
 F 0 "M4" V 7399 4206 50  0000 L CNN
 F 1 "Motor_Servo_JR" V 7490 4206 50  0000 L CNN
-F 2 "Connector_Wire:SolderWirePad_1x03_P3.175mm_Drill1mm" H 7450 3810 50  0001 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 7450 3810 50  0001 C CNN
 F 3 "http://forums.parallax.com/uploads/attachments/46831/74481.png" H 7450 3810 50  0001 C CNN
 	1    7450 4000
 	0    1    1    0   
@@ -524,7 +524,7 @@ U 1 1 5D2772B7
 P 9150 3500
 F 0 "J2" H 9177 3476 50  0000 L CNN
 F 1 "Conn_01x02_Female" H 9177 3385 50  0000 L CNN
-F 2 "Connector:Banana_Jack_2Pin" H 9150 3500 50  0001 C CNN
+F 2 "ServoTester:BananaJack_2" H 9150 3500 50  0001 C CNN
 F 3 "~" H 9150 3500 50  0001 C CNN
 	1    9150 3500
 	1    0    0    -1  
